@@ -1,0 +1,25 @@
+<html>
+<link rel="stylesheet" href="/static/style.css"/>
+	<head>
+	</head>
+
+<body>
+<h1>{{name}}'s favorite shows are: </h1>
+
+<ol>
+{%for i in range(0, len)%}
+	<li>{{TVshows[i]}}
+	{% if 'Rick and Morty' in TVshows[i] %}
+	<style>
+		li{color: green;}
+	</style>
+	{% else %}	
+	<style>
+		li{color: black;}
+	</style>
+	{% endif %}
+	</li>
+{%endfor%}
+</ol>	      
+</body>
+</html>
